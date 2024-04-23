@@ -1,0 +1,35 @@
+
+%Titulo de la tabla de contendios centrado, bold y mayusculas
+\newpage
+\tableofcontents
+\addcontentsline{toc}{chapter}{\bfseries \uppercase{índice general de contenidos}}
+
+\let\origaddvspace\addvspace
+
+\newpage
+\renewcommand{\addvspace}[1]{}
+\listoftables
+\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
+\addcontentsline{toc}{chapter}{\bfseries\uppercase{índice de tablas}}
+
+\newpage
+\renewcommand{\addvspace}[1]{}
+\listoffigures
+\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
+\addcontentsline{toc}{chapter}{\bfseries\uppercase{índice de figuras}}
+
+% \newpage
+% \listofappendices
+% \addcontentsline{toc}{chapter}{\bfseries\uppercase{índice de anexos}}
+
+\newpage
+\listofappendixs
+\addcontentsline{toc}{chapter}{\bfseries\uppercase{índice de anexos}}
+
+\newpage
+\renewcommand{\addvspace}[1]{}
+\lstlistoflistings
+\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
+\addcontentsline{toc}{chapter}{\bfseries\uppercase{índice de códigos}}
+
+%Numeros arabicos despues de los prelims

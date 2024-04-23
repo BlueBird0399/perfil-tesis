@@ -1,80 +1,33 @@
 %! TeX program = lualatex
-\documentclass{perfil}
+\documentclass{tesis}
 \usepackage{fontspec}
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
-\setmainfont{Times New Roman}
-\newcommand{\periodo}{marzo 2024 - agosto 2024}
-\doublespacing
-\onehalfspace
-\singlespace
-\spacing{1.5}
-\newfontfamily\arialfont{Arial}
-\DeclareTextFontCommand{\textArial}{\arialfont}
+\usepackage{titlesec}
+\usepackage{longtable}
 
-\hypersetup{ colorlinks=true,  %habilitar colorear enlaces
-    linkcolor=black,
-    filecolor=black,
-    urlcolor=black,
-    citecolor=black
-}
-
+% Config
+\input{config/config.tex}
+\input{config/commands.tex}
+\input{resources/constants/constants.tex}
 
 \begin{document}
-%Portada - Indice de contenidos - Datos Informativos A
-\input{sections/0-prelims/prelims.tex}
+% Prelims
+\pagenumbering{roman}
+\input{chapters/0-prelims/index.tex}
 
-\renewcommand{\thepage}{\arabic{page}}% Roman page numbers
-\begin{center} \textbf{B. CONTENIDOS} \end{center}
-\section{Tema de investigación}
-\input{sections/1-tema-investigacion/tema-investigacion.tex}
-\input{sections/1-tema-investigacion/planteamiento-problema.tex}
-
-\section{Justificación}
-\input{sections/2-justificacion.tex}
-
-\section{Objetivo general}
-\input{sections/3-objetivo-general.tex}
-
-\section{Objetivos específicos}
-\input{sections/4-objetivos-especificos.tex}
-
-\section{Fundamentación teórica}
-En este apartado se mostrará los \textit{Antecedentes Investigativos} y \textit{Marco Teórico Conceptual}
-resultado de la revisión exhaustiva realizada en los trabajos de autores con investigaciones similares
-sobre el tema de investigación.
-\input{sections/5-fundamentacion-teorica/antecedentes-investigativos.tex}
-\input{sections/5-fundamentacion-teorica/marco-teorico.tex}
-
-\section{Metodología}
-\input{sections/6-metodologia/modalidad-investigacion.tex}
-\input{sections/6-metodologia/poblacion-muestra.tex}
-\input{sections/6-metodologia/recoleccion-informacion.tex}
-\input{sections/6-metodologia/procesamiento-informacion.tex}
-\input{sections/6-metodologia/propuesta-de-solución.tex}
-\input{sections/6-metodologia/desarrollo.tex}
-
-\section{Recursos}
-\input{sections/7-recursos.tex}
-
-\input{sections/8-cronograma.tex}
-
+% Chapters
 \newpage
-\section{Bibliografía}
-\input{sections/9-biblio.tex}
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\input{chapters/I-marco-teorico/index.tex}
+\input{chapters/II-metodologia/index.tex}
+\input{chapters/III-resultados-y-discusion/index.tex}
+\input{chapters/IV-conclusiones-y-recomendaciones/index.tex}
 
-\newpage
-\section{Anexos}
-\input{sections/10-anexos.tex}
+% \input{chapters/8-cronograma.tex}
 
-% \vfill
-% \begin{center}
-% 	\begin{tabular}{l}
-% 		Revisado por:               \\
-% 		\vspace{3cm}                \\
-% 		\rule{0.5\textwidth}{0.5pt} \\
-% 		Ing. Hernan Naranjo          \\
-% 	\end{tabular}
-% \end{center}
+\input{chapters/appendices/index.tex}
 
+% % Bibliography
+\input{chapters/V-bibliografia/biblio.tex}
 
 \end{document}
