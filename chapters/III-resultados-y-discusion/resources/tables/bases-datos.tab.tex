@@ -1,0 +1,28 @@
+\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+    \caption[]{Análisis y comparación entre las bases de datos MySQL y PostgreSQL\cite{ExpressInfraestructuraAplicaciones}\cite{FastLowOverhead}} \label{tab:bases-datos}                                        \\
+
+    \hline \multicolumn{1}{|c|}{\textbf{Criterio}} & \multicolumn{1}{|c|}{\textbf{MySQL}}                                              & \multicolumn{1}{|c|}{\textbf{PostgreSQL}}                               \\ \hline
+    \endfirsthead
+
+    \multicolumn{3}{c}%
+    {{\normalfont \tablename\ \thetable{} -- continuación de la página anterior}}                                                                                                                                \\
+    \hline \multicolumn{1}{|c|}{\textbf{Criterio}} & \multicolumn{1}{|c|}{\textbf{MySQL}}                                              & \multicolumn{1}{|c|}{\textbf{PostgreSQL}}                               \\ \hline
+    \endhead
+
+    \hline \multicolumn{3}{|r|}{{Continua en la siguiente página}}                                                                                                                                               \\ \hline
+    \endfoot
+
+    \hline \hline
+    \endlastfoot
+    GUI                                            & MySQL Workbench                                                                   & pgAdmin                                                                 \\
+    Consumo de recursos                            & Consumo mayor de CPU y memoria                                                    & Consumo mayor de CPU y memoria                                          \\
+    Tiempo de respuesta de CRUD                    & Bajo                                                                              & Alto                                                                    \\
+    Lenguaje de ejecución                          & C/C++                                                                             & C                                                                       \\
+    herencia de tablas                             & No                                                                                & Si                                                                      \\
+    Tipos de datos                                 & Solo tipos estándar                                                               & Estándar, store, arreglos, geográficos, definido por el usuario, etc.   \\
+    APIs y otros métodos de acceso                 & ADO.NET, JDBC, biblioteca C nativa, ODBC, API de transmisión para objetos grandes & ADO.NET, JDBC, ODBC, API nativa patentada                               \\
+    Tipos de conexión                              & Las conexiones son subprocesos del sistema operativo                              & Las conexiones son subprocesos del sistema operativo                    \\
+    Respaldo                                       & En MySQL, Mysqldump y XtraBackup, las herramientas proporcionan respaldo          & PostgreSQL proporciona una copia de seguridad completa en línea.        \\
+    Lenguajes soportados                           & C/C++, PHP, Java, Go, Delphi, Lisp, Erlang, Node.js, R, Perl, PHP                 & Go, C/C++, Java, Delphi, Javascript, Erlang, Lisp, R, .Net, Tcl, Python \\
+    Sistemas Operativos Soportados                 & Windows, Linux, macOS, Oracle Solaris, Fedora, FreeBSD                            & Windows, macOS, BSD, Linux, Solaris                                     \\
+\end{longtable}
