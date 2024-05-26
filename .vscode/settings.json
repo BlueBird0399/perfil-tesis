@@ -1,3 +1,22 @@
+// {
+//     "cSpell.words": [
+//         "Ambato",
+//         "CEPAL",
+//         "criminalistas",
+//         "enrutador",
+//         "Fastify",
+//         "Geolocalización",
+//         "georreferenciación",
+//         "georreferenciada",
+//         "georreferenciados",
+//         "hotspots",
+//         "PADF",
+//         "renderizado",
+//         "Renderizado"
+//     ],
+//     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+//     "latex-workshop.latex.outDir": "%DIR%/out"
+// }
 {
     "cSpell.words": [
         "Ambato",
@@ -12,8 +31,31 @@
         "hotspots",
         "PADF",
         "renderizado",
-        "Renderizado"
+        "Renderizado",
+        "reportería"
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-dir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatex"
+            ]
+        }
     ],
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
-    "latex-workshop.latex.outDir": "%DIR%/out"
 }
