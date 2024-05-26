@@ -1,0 +1,63 @@
+\newcounter{reqcounter}
+\setcounter{reqcounter}{1}
+
+\begin{longtable}{|p{0.6cm}|p{3cm}|p{6.3cm}|c|c|}
+    \caption{Definición de requerimientos} \label{tab:requerimientos}                                                                                                                                                                                                                                                                   \\
+
+    \hline \multicolumn{1}{|c|}{\textbf{ID}}     & \multicolumn{1}{|c|}{\textbf{Requerimiento}}       & \multicolumn{1}{|c|}{\textbf{Descripción}}                                                                                                   & \multicolumn{1}{|c|}{\textbf{Prioridad}} & \multicolumn{1}{|c|}{\textbf{Riesgo}} \\ \hline
+    \endfirsthead
+
+    \multicolumn{5}{c}%
+    {{\normalfont \tablename\ \thetable{} -- continuación de la página anterior}}                                                                                                                                                                                                                                                       \\
+    \hline \multicolumn{1}{|c|}{\textbf{ID}}     & \multicolumn{1}{|c|}{\textbf{Requerimiento}}       & \multicolumn{1}{|c|}{\textbf{Descripción}}                                                                                                   & \multicolumn{1}{|c|}{\textbf{Prioridad}} & \multicolumn{1}{|c|}{\textbf{Riesgo}} \\ \hline
+    \endhead
+
+    \hline
+    \multicolumn{5}{|c|}{{Continua en la siguiente página}}                                                                                                                                                                                                                                                                             \\
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    \multicolumn{5}{|l|}{\textbf{Todos los usuarios de la aplicación web y móvil}}                                                                                                                                                                                                                                                      \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Iniciar Sesión                                     & El inicio de sesión se realizará a través de la autenticación del usuario, quien deberá ingresar su correo y contraseña.                     & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Cerrar Sesión                                      & El usuario podrá cerrar la sesión en cualquier momento.                                                                                      & Alta                                     & Bajo                                  \\
+    \hline
+    \multicolumn{5}{|l|}{\textbf{Administrador del sistema}}                                                                                                                                                                                                                                                                            \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Administrar usuarios                               & El adminsitrador podrá crear, visualizar, actualizar y deshabilitar usuarios                                                                 & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Gestionar tipos de incidentes                      & El administrador podrá crear, visualizar, actualizar y deshabilitar tipos de incidentes                                                      & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Gestionar zonas de vigilancia                      & El administrador podrá crear, visualizar, actualizar y deshabilitar tipos de incidentes                                                      & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Asignar policías a las zonas de vigilancia         & El administrador podra asignar y desasignar miembros de la policias a las zonas de vigilancia                                                & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de incidentes                   & El administrador podrá visualizar mediante un mapa las alertas de emergencia enviadas por los ciudadanas asi como su posición en tiempo real & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar mapas de calor                          & El administrador podrá visualizar mediante un mapa de calor los incidentes delictivos suscitados en las diferentes zonas                     & Alta                                     & Bajo                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar reportes                                & El administrador podrá visualizar informes detallados sobre los incidentes ocurridos, generados mediante BI.                                 & Alta                                     & Alto                                  \\
+    \hline
+    \multicolumn{5}{|l|}{\textbf{Usuario ciudadano}}                                                                                                                                                                                                                                                                                    \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Registro de usuario                                & Los usuarios deberán ingresar sus datos y fotografía mediante un formulario.                                                                 & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Cambiar contraseña                                 & El usuario podrá cambiar su contraseña en cualquier momento.                                                                                 & Media                                    & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Recuperar contraseña                               & El usuario podrá recuperar su contraseña en caso de olvidarla mediante su correo electrónico.                                                & Baja                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Asignar miembros a su grupo familiar               & El usuario podrá asignar miembros a su grupo familiar mediante la cédula de ciudadania.                                                      & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Enviar alertas de emergencia                       & El usuario podrá enviar alertas de emergencia seleccionando el tipo de incidente y oprimiendo un botón de panica durante 3 segundos.         & Alta                                     & Alto                                  \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de emergencia de familiares     & El usuario podrá visualizar mediante un mapa las alertas de emergencia enviadas por los sus familiares asi como su posición en tiempo real.  & Alta                                     & Alto                                  \\
+    \hline
+    \multicolumn{5}{|l|}{\textbf{Policía}}                                                                                                                                                                                                                                                                                              \\
+    \hline
+    R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de emergencia de los ciudadanos & El policía podrá visualizar mediante un mapa las alertas de emergencia enviadas por los ciudadanas asi como su posición en tiempo real       & Alta                                     & Alto                                  \\
+    \hline
+\end{longtable}

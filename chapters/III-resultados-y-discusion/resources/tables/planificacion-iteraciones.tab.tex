@@ -1,0 +1,39 @@
+\newcounter{numcounter}
+\newcounter{itcounter}
+\setcounter{numcounter}{1}
+\setcounter{itcounter}{1}
+\setcounter{reqcounter}{1}
+
+\begin{longtable}{|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{5cm}|c|c|}
+    \caption{Planificación de iteraciones} \label{tab:planificacion-iteraciones}                                                                                                                                                                                                                                        \\
+
+    \hline \multicolumn{1}{|c|}{\textbf{Iteración}}                      & \multicolumn{1}{|c|}{\textbf{N.}}           & \multicolumn{1}{|c|}{\textbf{ID}}            & \multicolumn{1}{|c|}{\textbf{Requerimientos}}      & \multicolumn{1}{|c|}{\textbf{Tiempo horas}} & \multicolumn{1}{|c|}{\textbf{Estimado días}} \\ \hline
+    \endfirsthead
+
+    \multicolumn{6}{c}%
+    {{\normalfont \tablename\ \thetable{} -- continuación de la página anterior}}                                                                                                                                                                                                                                       \\
+    \hline \multicolumn{1}{|c|}{\textbf{Iteración}}                      & \multicolumn{1}{|c|}{\textbf{N.}}           & \multicolumn{1}{|c|}{\textbf{ID}}            & \multicolumn{1}{|c|}{\textbf{Requerimientos}}      & \multicolumn{1}{|c|}{\textbf{Tiempo horas}} & \multicolumn{1}{|c|}{\textbf{Estimado días}} \\ \hline
+    \endhead
+
+    \hline \multicolumn{6}{|r|}{{Continua en la siguiente página}}                                                                                                                                                                                                                                                      \\ \hline
+    \endfoot
+
+    \hline \hline
+    \endlastfoot
+    \multirow{4}{*}{Iteración \arabic{itcounter}\stepcounter{itcounter}} & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Iniciar sesión                                     & 6                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Cerrar sesión                                      & 1                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Registro de usuario                                & 12                                          & 2                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Cambiar contraseña                                 & 2                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Recuperar contraseña                               & 6                                           & 1                                            \\\hline
+    \multirow{4}{*}{Iteración \arabic{itcounter}\stepcounter{itcounter}} & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Asignar miembros al grupo familiar                 & 6                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Enviar alertas de emergencia                       & 18                                          & 3                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de emergencia de familiares     & 12                                          & 2                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Administrar usuarios                               & 6                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Gestionar tipos de incidentes                      & 4                                           & 1                                            \\\hline
+    \multirow{6}{*}{Iteración \arabic{itcounter}\stepcounter{itcounter}} & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Gestionar zonas de vigilancia                      & 18                                          & 3                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Asignar policías a las zonas de vigilancia         & 5                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de incidentes                   & 18                                          & 3                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar mapas de calor                          & 6                                           & 1                                            \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar reportes                                & 84                                          & 14                                           \\\cline{2-6}
+                                                                         & \arabic{numcounter}\stepcounter{numcounter} & R\arabic{reqcounter}\stepcounter{reqcounter} & Visualizar alertas de emergencia de los ciudadanos & 12                                          & 2                                            \\
+\end{longtable}
