@@ -1,0 +1,67 @@
+\paragraph{Carta de diseño para el modelo dimensional}
+
+La carta de diseño para el modelo dimensional se utiliza para describir el proceso de diseño de un modelo dimensional
+siguiendo los pasos de la metodología Hefesto. Estos pasos incluyen la selección del proceso de negocio, la declaración
+del grano, la identificación de las dimensiones y sus atributos, la identificación de las tablas de hechos y sus métricas,
+y el diseño del esquema dimensional. A continuación, se presenta cada uno de estos pasos.
+
+\begin{itemize}
+    \item Seleccionar el proceso de negocio:
+          \begin{itemize}
+              \item Identificar las pregustas del negocio.
+              \item Identificar indicadores y perspectivas.
+              \item Diseñar el modelo conceptual.
+          \end{itemize}
+    \item Declarar el grano.
+    \item Identificar las dimensiones y sus atributos.
+    \item Identificar las tablas de hechos y sus métricas.
+    \item Diseñar el esquema dimensional
+\end{itemize}
+
+\paragraph{Seleccionar el proceso de negocio}
+
+\paragraph{Preguntas del negocio}
+
+El objetivo principal del sistema de reportería de incidentes delictivos es recolectar y analizar información
+sobre los incidentes delictivos reportados a través de un sistema de alarma, así como detalles de los usuarios
+y datos geográficos relevantes para apoyar la toma de decisiones de las autoridades policiales.
+
+\paragraph{Identificar indicadores y perspectivas}
+
+\begin{itemize}
+    \item Determinar el número de incidentes por tipo de incidente y zona de vigilancia.
+    \item Analizar la distribución de incidentes por género, discapacidad, etnia y edad de los usuarios.
+    \item Identificar las zonas con mayor número de incidentes para optimizar la vigilancia policial.
+\end{itemize}
+
+\input{chapters/III-resultados-y-discusion/resources/tables/indicadores-perspectivas.tab.tex}
+
+\paragraph{Declarar el grano}
+
+El grano del modelo dimensional es un único incidente delictivo reportado. Esto implica que cada registro en la
+tabla de hechos representa un incidente específico.
+
+\paragraph{Identificar las dimensiones y sus atributos}
+
+En las Tablas \ref{tab:dimension-tiempo}, \ref{tab:dimension-usuarios}, \ref{tab:dimension-tipo-de-alarma},
+\ref{tab:dimension-tipo-de-incidente} y \ref{tab:dimension-zona-de-vigilancia} se presentan las dimensiones y
+sus atributos identificados para el modelo dimensional.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/dimensiones-atributos.tab.tex}
+
+\paragraph{Identificar las tablas de hechos y sus métricas}
+
+En la Tabla \ref{tab:hechos-incidentes-delictivos} se presentan los hechos de incidentes delictivos y sus atributos.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/tablas-hechos-atributos.tab.tex}
+
+\paragraph{Esquema dimensional}
+
+En la Figura \ref{fig:esquema-modelo-dimensional} se muestra el esquema del modelo dimensional propuesto para el sistema de reportería de incidentes delictivos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapters/III-resultados-y-discusion/resources/images/esquema-modelo-dimensional.png}
+    \caption{Esquema del modelo dimensional para el sistema de reportería de incidentes delictivos}
+    \label{fig:esquema-modelo-dimensional}
+\end{figure}

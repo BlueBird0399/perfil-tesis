@@ -1,0 +1,55 @@
+\appendixs{Script en Python para la creación de clusters de puntos georreferenciados.}
+\label{apendix:script-cluster-python}
+\begin{figure}[H]
+    \begin{minted}[fontsize=\footnotesize, linenos, breaklines, frame=single]{python}
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    from sklearn.cluster import KMeans
+    import pygments as pg
+    
+    df = pd.read_excel('geo-locations.xlsx', usecols='B:D', skiprows=0)
+    df.columns = ['latitude', 'longitude', 'distance']
+    
+    # Elbow Method
+    def elbow_method(data):
+        wcss = []
+        for i in range(1, 11):
+            kmeans = KMeans(n_clusters=i, max_iter=300)
+            kmeans.fit(df[['latitude', 'longitude']])
+            wcss.append(kmeans.inertia_)
+        plt.plot(range(1, 11), wcss)
+        plt.title('Método del Codo')
+        plt.xlabel('Número de clusters')
+        plt.ylabel('WCSS (Within Cluster Sum of Squares)')
+        plt.show()
+    
+    elbow_method(df)
+    
+    # Cluster optimal number
+    numero_optimo_clusters = 2
+    
+    # apply K-Means
+    kmeans = KMeans(n_clusters=numero_optimo_clusters, max_iter=300, random_state=42)
+    kmeans.fit(df[['latitude', 'longitude']])
+    df['cluster'] = kmeans.labels_
+    
+    # Calc the mean distance of each cluster
+    distancias_medias_clusters = df.groupby('cluster')['distance'].mean()
+    print("Distancias medias de cada cluster:")
+    print(distancias_medias_clusters)
+    
+    # Calc the mean of the mean distances of the clusters
+    media_de_las_medias = round(distancias_medias_clusters.mean(), 2)
+    print("Media de las distancias medias de los clusters:")
+    print(media_de_las_medias)
+    
+    # Graph
+    plt.scatter(df['latitude'], df['longitude'], c=df['cluster'], cmap='viridis')
+    plt.title('Clusters de Puntos GPS')
+    plt.xlabel('Latitud')
+    plt.ylabel('Longitud')
+    plt.colorbar(label='Cluster')
+    plt.show()
+    
+    \end{minted}
+\end{figure}

@@ -1,0 +1,25 @@
+\appendixs{Script en Node.js para la comparación de los datos georreferenciados.}
+\label{apendix:script-exceljs}
+\begin{figure}[H]
+    \begin{minted}[fontsize=\footnotesize, linenos, breaklines, frame=single]{js}
+    import Exceljs from "exceljs";
+    import distances from "./distances.json" with { type: "json" };
+    import { haversineDistance } from "./haversineDistance.js";
+    import { roundDecimal } from "./lib/roundDecimal.js";
+    const distancesArray = [];
+    distances.forEach((d) => {
+        const center = { lat: d.realLatitude, lng: d.realLongitude };
+        const location = { lat: d.latitude, lng: d.longitude };
+        const distance = haversineDistance(center, location);
+        distancesArray.push({ distance: roundDecimal(distance) });
+    });
+    const newWorkbook = new Exceljs.Workbook();
+    const sheet = newWorkbook.addWorksheet("geo-distances");
+    sheet.addRow(["#", "Latitude", "Longitude", "Haversine distance from center (m)"]);
+    distancesArray.forEach((distance, index) => {
+        sheet.addRow([index + 1, distances[index].latitude, distances[index].longitude, distance.distance]);
+    });
+    newWorkbook.xlsx.writeFile("./geo-locations.xlsx");
+    \end{minted}
+\end{figure}
+

@@ -1,0 +1,25 @@
+\begin{longtable}{|p{6cm}|p{6cm}|}
+    \caption{Hechos de incidentes delictivos con sus atributos} \label{tab:hechos-incidentes-delictivos}     \\
+
+    \hline \multicolumn{1}{|c|}{\textbf{Campo}} & \multicolumn{1}{|c|}{\textbf{Descripción}}                 \\ \hline
+    \endfirsthead
+
+    \multicolumn{2}{c}%
+    {{\normalfont \tablename\ \thetable{} -- continuación de la página anterior}}                            \\
+    \hline \multicolumn{1}{|c|}{\textbf{Campo}} & \multicolumn{1}{|c|}{\textbf{Descripción}}                 \\ \hline
+    \endhead
+
+    \hline \multicolumn{2}{|r|}{{Continua en la siguiente página}}                                           \\ \hline
+    \endfoot
+
+    \hline \hline
+    \endlastfoot
+    incidenteID                                 & Clave primaria de la tabla de hechos incidentes delictivos \\\hline
+    fechaID                                     & Clave foránea a la dimensión de tiempo                     \\\hline
+    usuarioID                                   & Clave foránea a la dimensión de usuarios                   \\\hline
+    tipoAlarmaID                                & Clave foránea a la dimensión de tipo de alarma             \\\hline
+    tipoIncidenteID                             & Clave foránea a la dimensión de tipo de incidente          \\\hline
+    zonaVigilanciaID                            & Clave foránea a la dimensión de zonas de vigilancia        \\\hline
+    ubicacionID                                 & Clave foránea a la dimensión de ubicación geográfica       \\\hline
+    numeroIncidentes                            & Número de incidentes reportados                            \\\hline
+\end{longtable}

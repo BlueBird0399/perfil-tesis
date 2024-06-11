@@ -1,0 +1,22 @@
+\appendixs{Script en Node.js para la comparación de los datos georreferenciados.}
+\label{apendix:script-haversine}
+\begin{figure}[H]
+  \begin{minted}[fontsize=\footnotesize, linenos, breaklines, frame=single]{js}
+  function haversineDistance(point1, point2) {
+    const R = 6378137; // Radius of the Earth in meters
+    const rlat1 = point1.lat * (Math.PI / 180); // Convert degrees to radians
+    const rlat2 = point2.lat * (Math.PI / 180); // Convert degrees to radians
+    const difflat = rlat2 - rlat1; // Radian difference (latitudes)
+    const difflon = (point2.lng - point1.lng) * (Math.PI / 180); // Radian difference (longitudes)
+    const d = 2 * R * Math.asin( Math.sqrt(
+          Math.sin(difflat / 2) * Math.sin(difflat / 2) +
+          Math.cos(rlat1) *
+          Math.cos(rlat2) *
+          Math.sin(difflon / 2) *
+          Math.sin(difflon / 2)
+        )
+      );
+    return d;
+  }
+  \end{minted}
+\end{figure}
