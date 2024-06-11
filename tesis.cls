@@ -69,6 +69,7 @@
 \RequirePackage{xpatch}
 \RequirePackage{calc}
 \RequirePackage{pgfplots}
+\RequirePackage{alphalph}
 
 \spacing{1.5}
 
@@ -172,7 +173,8 @@
 
 
 %pretty format for appendices
-\newrefformat{app}{Anexo~\ref{#1}}
+\newrefformat{apendix}{Anexo~\ref{#1}}
+% \newrefformat{app}{Anexo~\ref{#1}}
 \newrefformat{table}{Tabla~\ref{#1}}
 \newrefformat{lst}{Código~\ref{#1}}
 \newrefformat{fig}{Figura~\ref{#1}}
@@ -183,7 +185,7 @@
 \newlistof{appendixs}{apx}{\listappendixsname}
 
 \newcommand{\appendixs}[1]{%
-	\renewcommand{\theappendixs}{\Alph{appendixs}}
+	\renewcommand{\theappendixs}{\AlphAlph{\value{appendixs}}}
 	\refstepcounter{appendixs}
 	\begin{center}
 		{Anexo \theappendixs. #1}
