@@ -1,0 +1,114 @@
+\section{Análisis de herramientas de desarrollo}
+En este apartado se presenta el análisis y selección de las herramientas de desarrollo que se utilizarán para la
+implementación del proyecto.
+
+\subsection{Análisis y selección de la metodología de desarrollo}
+
+En la Tabla \ref{tab:metodologias} se presenta una comparación entre las metodologías de desarrollo de software ágil
+y tradicional. Se evalúan aspectos como el estilo de gestión, la gestión del conocimiento, el modelo de desarrollo,
+la estructura organizativa y el control de calidad, entre otros. En este análisis, se destaca que la metodología ágil
+es la más adecuada para el desarrollo del proyecto actual. Esta metodología permite realizar cambios en el desarrollo
+del software de manera rápida y eficiente, además de adaptarse fácilmente a equipos de desarrollo pequeños y medianos,
+manteniendo una planificación y control de calidad permanente en iteraciones a corto plazo. En contraposición, la
+metodología tradicional requiere una planificación exhaustiva y detallada, lo cual no es apropiado para el desarrollo
+de software adaptativo de alta calidad en equipos pequeños. Esto se debe a que la metodología tradicional presupone
+que los sistemas sean completamente definidos y predecibles, y cualquier cambio en el desarrollo puede resultar en
+un alto costo de reinicio.
+
+\bigbreak
+Por consiguiente, se optó por la metodología ágil para el desarrollo del presente proyecto.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/metodologias.tex}
+
+Con el objetivo de seleccionar la metodología ágil más adecuada para el desarrollo del proyecto, se realizó un
+análisis comparativo entre las metodologías ágiles tomando en cuenta criterios tales como, los cuales se detallan en
+la Tabla \ref{tab:metodologias-agiles}.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/metodologias-agiles.tab.tex}
+
+
+\subsection{Análisis y selección de herramientas de desarrollo}
+
+Mediante el análisis realizo en la Tabla \ref{tab:metodologias-agiles}, se optó por emplear la metodología de
+Desarrollo Rápido de Aplicaciones (RAD) debido a su enfoque centrado en la rápida entrega de soluciones y
+prototipos funcionales a los clientes. La selección de RAD se basa en su capacidad para proporcionar resultados
+en plazos cortos gracias a su naturaleza iterativa e incremental.
+
+\subsection{Análisis y selección del framework de desarrollo para el servidor web (Backend)}
+
+Como lenguaje de desarrollo para el servidor web (Backend) se optó por utilizar Typescript junto al entorno de
+ejecución de Node.js, debido que este permite el desarrollo de aplicaciones escalables y de alto rendimiento,
+impulsado por eventos asíncronos, ademas del amplio soporte por parte de la comunidad y documentación disponible,
+así como a la facilidad de uso y la gran cantidad de librerías y frameworks disponibles para el desarrollo de aplicaciones
+web \cite{haroDesarrolloBackendPara}.
+\bigbreak
+Como framework de desarrollo para el servidor web (backend), se optó por el uso de NestJS debido a que proporciona
+una arquitectura modular y escalable basada en el patrón de diseño de inyección de dependencias. Además, combina
+elementos de la programación orientada a objetos (POO), programación funcional (PF) y programación funcional
+reactiva (PFR). NestJS permite utilizar como base dos de los frameworks más populares en el desarrollo web, Express y
+Fastify, mediante un nivel de abstracción superior que permite exponer las APIs de ambos frameworks de forma
+directa al desarrollador, lo que proporciona una mayor flexibilidad al momento de incluir paquetes de terceros.
+Además, destaca por la gran cantidad de módulos y librerías que posee \cite{phamDEVELOPINGBACKENDWEB2020}.
+\bigbreak
+En la tabla \ref{tab:frameworks-backend} se presenta una comparación entre Express y Fastify tomando en cuenta
+criterios como el soporte para Typescript, rendimiento, velocidad, documentación, soporte por la comunidad y
+paquetes/librerías.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/frameworks-backed.tab.tex}
+
+Considerando el análisis presentado en la Tabla \ref{tab:frameworks-backend}, se optó por utilizar Fastify como
+el framework base para NestJS. Esto se debe a que Fastify es más rápido que Express, gracias a su enfoque en la
+velocidad y la eficiencia. Fastify ha sido diseñado específicamente con el objetivo de ser rápido y eficiente,
+lo que lo convierte en una excelente elección para aplicaciones que necesitan un alto rendimiento.
+
+\subsection{Análisis y selección del framework de desarrollo para el cliente web (Frontend)}
+
+Dado que en el lado del servidor se ha optado por utilizar TypeScript, para el cliente web (frontend) se ha optado
+por emplear el mismo lenguaje de programación. Esto se debe a que permite una integración más fluida entre el
+cliente y el servidor, además de facilitar la comunicación entre ambos. Para el desarrollo del cliente web
+(frontend), se han considerado tres de los frameworks más populares en la actualidad: Angular, ReactJS y VueJS.
+A continuación, se presenta una comparación de estos frameworks en la Tabla \ref{tab:frameworks-web}.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/frameworks-web.tab.tex}
+
+\input{chapters/III-resultados-y-discusion/resources/tables/ventajas-desventajas-frameworks-web.tab.tex}
+
+
+Tomando en cuenta el análisis de las características de cada framework, así como sus ventajas y desventajas, se
+optó por el uso de ReactJS para el desarrollo del cliente web (frontend). Esto se debe a que ReactJS es una de
+las librerías más populares y ampliamente utilizadas en la actualidad, lo que significa que cuenta con una gran
+comunidad de desarrolladores y una amplia variedad de recursos disponibles. Además, ReactJS posee un gran
+rendimiento y eficiencia gracias a su manejo eficiente del DOM virtual, lo que lo convierte en una excelente
+elección para aplicaciones web que requieren una interfaz de usuario rápida y receptiva, as���� como su capacidad
+de crear componentes reutilizables, lo que facilita el desarrollo de aplicaciones web complejas y escalables.
+
+\subsection{Análisis y selección del framework de desarrollo para el cliente móvil (Frontend)}
+
+Para el desarrollo del cliente móvil (frontend), se han considerado tres de los frameworks más populares en la
+actualidad: React Native, Flutter y Ionic. A continuación, se presenta una comparación de estos frameworks en la
+Tabla \ref{tab:frameworks-movil}.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/frameworks-movil.tab.tex}
+
+Considerando el análisis realizado en la Tabla \ref{tab:frameworks-movil}, se optó por utilizar Flutter para el
+desarrollo del cliente móvil (frontend). Esto se debe a que Flutter es un framework de desarrollo de aplicaciones
+móviles multiplataforma creado por Google, que permite el desarrollo de aplicaciones móviles nativas de alta
+calidad para Android e iOS desde una sola base de código. Flutter destaca por su rendimiento y eficiencia, gracias
+a su propio motor de renderizado, lo que lo convierte en una excelente elección para aplicaciones móviles que
+requieren un alto rendimiento y una interfaz de usuario rápida y receptiva. Además, Flutter cuenta con una amplia
+variedad de widgets y herramientas que facilitan el desarrollo de aplicaciones móviles complejas y escalables.
+
+\subsection{Análisis y selección de la base de datos}
+
+Pra la base de datos del proyecto se han considerado dos opciones: MySQL y PostgreSQL. A continuación, se presenta
+una comparación de estas bases de datos en la Tabla \ref{tab:bases-datos}.
+
+\input{chapters/III-resultados-y-discusion/resources/tables/bases-datos.tab.tex}
+
+Tomando en cuenta el análisis presentado en la Tabla \ref{tab:bases-datos}, se optó por utilizar PostgreSQL como
+la base de datos del proyecto. Esto se debe a que PostgreSQL es un sistema de gestión de bases de datos relacional
+de código abierto y de alto rendimiento, que ofrece una amplia variedad de características y funcionalidades
+avanzadas, como soporte para tipos de datos geoespaciales, herencia de tablas, tipos de datos definidos por el
+usuario, entre otros. Además, PostgreSQL cuenta con una arquitectura robusta y escalable, que permite gestionar
+grandes volúmenes de datos de forma eficiente y fiable, lo que lo convierte en una excelente elección para
+aplicaciones que requieren una base de datos potente y confiable.
