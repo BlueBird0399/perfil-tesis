@@ -4,41 +4,42 @@ implementación del proyecto.
 
 \subsection{Análisis y selección de la metodología de desarrollo}
 
-En la Tabla \ref{tab:metodologias} se presenta una comparación entre las metodologías de desarrollo de software ágil
-y tradicional. Se evalúan aspectos como el estilo de gestión, la gestión del conocimiento, el modelo de desarrollo,
-la estructura organizativa y el control de calidad, entre otros. En este análisis, se destaca que la metodología ágil
-es la más adecuada para el desarrollo del proyecto actual. Esta metodología permite realizar cambios en el desarrollo
-del software de manera rápida y eficiente, además de adaptarse fácilmente a equipos de desarrollo pequeños y medianos,
-manteniendo una planificación y control de calidad permanente en iteraciones a corto plazo. En contraposición, la
-metodología tradicional requiere una planificación exhaustiva y detallada, lo cual no es apropiado para el desarrollo
-de software adaptativo de alta calidad en equipos pequeños. Esto se debe a que la metodología tradicional presupone
-que los sistemas sean completamente definidos y predecibles, y cualquier cambio en el desarrollo puede resultar en
-un alto costo de reinicio.
+% En la Tabla \ref{tab:metodologias} se presenta una comparación entre las metodologías de desarrollo de software ágil
+% y tradicional. Se evalúan aspectos como el estilo de gestión, la gestión del conocimiento, el modelo de desarrollo,
+% la estructura organizativa y el control de calidad, entre otros. En este análisis, se destaca que la metodología ágil
+% es la más adecuada para el desarrollo del proyecto actual. Esta metodología permite realizar cambios en el desarrollo
+% del software de manera rápida y eficiente, además de adaptarse fácilmente a equipos de desarrollo pequeños y medianos,
+% manteniendo una planificación y control de calidad permanente en iteraciones a corto plazo. En contraposición, la
+% metodología tradicional requiere una planificación exhaustiva y detallada, lo cual no es apropiado para el desarrollo
+% de software adaptativo de alta calidad en equipos pequeños. Esto se debe a que la metodología tradicional presupone
+% que los sistemas sean completamente definidos y predecibles, y cualquier cambio en el desarrollo puede resultar en
+% un alto costo de reinicio.
 
-\bigbreak
-Por consiguiente, se optó por la metodología ágil para el desarrollo del presente proyecto.
+% \bigbreak
+% Por consiguiente, se optó por la metodología ágil para el desarrollo del presente proyecto.
 
-\input{chapters/III-resultados-y-discusion/resources/tables/metodologias.tex}
+% \input{chapters/III-resultados-y-discusion/resources/tables/metodologias.tex}
 
 Con el objetivo de seleccionar la metodología ágil más adecuada para el desarrollo del proyecto, se realizó un
-análisis comparativo entre las metodologías ágiles tomando en cuenta criterios tales como, los cuales se detallan en
-la Tabla \ref{tab:metodologias-agiles}.
+análisis comparativo entre las metodologías ágiles tomando en cuenta criterios tales como tamaño del proyecto,
+tamaño del equipo, enfoque, roles, ciclo de vida, ciclo de entrega, entre otros, los cuales se detallan en
+la Tabla \ref{tab:metodologias-agiles}, en base a la información proporcionada por \cite{remacheganayAPLICATIVOWEBUTILIZANDO}.
 
 \input{chapters/III-resultados-y-discusion/resources/tables/metodologias-agiles.tab.tex}
 
 
 \subsection{Análisis y selección de herramientas de desarrollo}
 
-Mediante el análisis realizo en la Tabla \ref{tab:metodologias-agiles}, se optó por emplear la metodología de
-Desarrollo Rápido de Aplicaciones (RAD) debido a su enfoque centrado en la rápida entrega de soluciones y
-prototipos funcionales a los clientes. La selección de RAD se basa en su capacidad para proporcionar resultados
-en plazos cortos gracias a su naturaleza iterativa e incremental.
+Mediante el análisis realizo en la Tabla \ref{tab:metodologias-agiles}, se optó por emplear la metodología ágil
+xp debido a que se centra en ofrecer un producto de alta calidad, destacando su capacidad de adaptarse a los cambios
+y su enfoque en la retroalimentación constante. Además, XP es adecuada para proyectos de pequeño y mediano tamaño,
+lo cual se ajusta a las características del proyecto actual.
 
 \subsection{Análisis y selección del framework de desarrollo para el servidor web (Backend)}
 
 Como lenguaje de desarrollo para el servidor web (Backend) se optó por utilizar Typescript junto al entorno de
 ejecución de Node.js, debido que este permite el desarrollo de aplicaciones escalables y de alto rendimiento,
-impulsado por eventos asíncronos, ademas del amplio soporte por parte de la comunidad y documentación disponible,
+impulsado por eventos asíncronos, además del amplio soporte por parte de la comunidad y documentación disponible,
 así como a la facilidad de uso y la gran cantidad de librerías y frameworks disponibles para el desarrollo de aplicaciones
 web \cite{haroDesarrolloBackendPara}.
 \bigbreak
@@ -67,9 +68,13 @@ Dado que en el lado del servidor se ha optado por utilizar TypeScript, para el c
 por emplear el mismo lenguaje de programación. Esto se debe a que permite una integración más fluida entre el
 cliente y el servidor, además de facilitar la comunicación entre ambos. Para el desarrollo del cliente web
 (frontend), se han considerado tres de los frameworks más populares en la actualidad: Angular, ReactJS y VueJS.
-A continuación, se presenta una comparación de estos frameworks en la Tabla \ref{tab:frameworks-web}.
+A continuación, se presenta una comparación de estos frameworks en la Tabla \ref{tab:frameworks-web}, en base a la
+información proporcionada por  \cite{remacheganayAPLICATIVOWEBUTILIZANDO} y \cite{StackOverflowDeveloper}.
 
 \input{chapters/III-resultados-y-discusion/resources/tables/frameworks-web.tab.tex}
+
+Tomando en cuenta el análisis de las características de cada framework, a continuación se presenta una comparación
+de las ventajas y desventajas de Angular, ReactJS y VueJS, en base a la información proporcionada por \cite{xingResearchAnalysisFrontend2019a}.
 
 \input{chapters/III-resultados-y-discusion/resources/tables/ventajas-desventajas-frameworks-web.tab.tex}
 
@@ -79,7 +84,7 @@ optó por el uso de ReactJS para el desarrollo del cliente web (frontend). Esto 
 las librerías más populares y ampliamente utilizadas en la actualidad, lo que significa que cuenta con una gran
 comunidad de desarrolladores y una amplia variedad de recursos disponibles. Además, ReactJS posee un gran
 rendimiento y eficiencia gracias a su manejo eficiente del DOM virtual, lo que lo convierte en una excelente
-elección para aplicaciones web que requieren una interfaz de usuario rápida y receptiva, as���� como su capacidad
+elección para aplicaciones web que requieren una interfaz de usuario rápida y receptiva, así como su capacidad
 de crear componentes reutilizables, lo que facilita el desarrollo de aplicaciones web complejas y escalables.
 
 \subsection{Análisis y selección del framework de desarrollo para el cliente móvil (Frontend)}
@@ -100,7 +105,7 @@ variedad de widgets y herramientas que facilitan el desarrollo de aplicaciones m
 
 \subsection{Análisis y selección de la base de datos}
 
-Pra la base de datos del proyecto se han considerado dos opciones: MySQL y PostgreSQL. A continuación, se presenta
+Para la base de datos del proyecto se han considerado dos opciones: MySQL y PostgreSQL. A continuación, se presenta
 una comparación de estas bases de datos en la Tabla \ref{tab:bases-datos}.
 
 \input{chapters/III-resultados-y-discusion/resources/tables/bases-datos.tab.tex}

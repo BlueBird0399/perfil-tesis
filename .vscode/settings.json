@@ -25,6 +25,7 @@
         "criminalistas",
         "enrutador",
         "escalabilidad",
+        "etimacion",
         "Fastify",
         "Fiallos",
         "Geolocalización",
@@ -35,36 +36,16 @@
         "Hefesto",
         "hotspots",
         "Luzmila",
+        "monitoreo",
         "nodemailer",
         "PADF",
         "Pazmiño",
         "prototipado",
+        "refactorización",
         "renderizado",
         "Renderizado",
         "reportería"
     ],
-    "latex-workshop.latex.outDir": "%DIR%/out",
-    "latex-workshop.latex.tools": [
-        {
-            "name": "lualatex",
-            "command": "lualatex",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-output-dir=%OUTDIR%",
-                "%DOC%"
-            ]
-        }
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk (lualatex)",
-            "tools": [
-                "lualatex"
-            ]
-        }
-    ],
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.latex.outDir": "%DIR%/out"
 }

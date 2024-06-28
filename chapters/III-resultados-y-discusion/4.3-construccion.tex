@@ -33,7 +33,7 @@ cualquier cambio en el esquema de la base de datos se reflejará automáticament
 
 \paragraph{Esquema de la base de datos}
 Una vez definidos los modelos en el esquema de prisma se procedió a realizar la migración de la base de datos, para ello se utilizó el
-comando \mintinline{text}{npx prisma migrate dev}, el cual crea las tablas en la base de datos PostgreSQL a partir del esquema definido
+comando "npx prisma migrate dev", el cual crea las tablas en la base de datos PostgreSQL a partir del esquema definido
 en el archivo schema.prisma, como se muestra en la Figura \ref{fig:migracion-base-datos}.
 
 \begin{landscape}
@@ -51,8 +51,8 @@ decoradores en las clases de los modelos de datos. Estos decoradores se encargan
 realizadas a la API, como se muestra en el Anexo \ref{apendix:validacion-datos-api}.
 
 \paragraph{Envío de correos electrónicos}
-Para el envío de correos electrónicos en la API se utilizo la librería de nest mailer, la cual trabaja sobre la librería nodemailer
-para el envío de correos electrónicos. Para la configuración del servicio de envío de correos se utilizo el SMTP (Simple Mail Transfer
+Para el envío de correos electrónicos en la API se utilizó la librería de nest mailer, la cual trabaja sobre la librería nodemailer
+para el envío de correos electrónicos. Para la configuración del servicio de envío de correos se utilizó el SMTP (Simple Mail Transfer
 Protocol) de Gmail, este permite enviar correos electrónicos utilizando la cuenta de Gmail del usuario administrador, como se muestra
 en el Anexo \ref{apendix:envio-correos-api}.
 \bigbreak
@@ -61,7 +61,7 @@ Para plantilla de correo electrónico se utilizó el sistema de plantillas de ha
 de un archivo de plantilla y datos de contexto en formato JSON. En el Anexo \ref{apendix:plantilla-correo-api} se muestra la plantilla
 de correo electrónico utilizada para recuperar la contraseña de un usuario.
 
-\paragraph{Configuracion y uso del servicio de almacenamiento de imágenes}
+\paragraph{Configuración y uso del servicio de almacenamiento de imágenes}
 Para el almacenamiento de imágenes en la API se utilizó el servicio de Cloudinary, el cual permite almacenar y gestionar imágenes en la nube.
 Cloudinary provee una librería para NodeJS que facilita la subida de imágenes, para la configuración se requiere obtener una api key, api secret
 y cloud name, como se muestra en el Anexo \ref{apendix:configuracion-cloudinary-api}.
@@ -90,7 +90,7 @@ de importar y exportar los componentes de la aplicación, lo que facilita la reu
 
 \paragraph{Controladores}
 Los controladores en NestJS son clases que se encargan de gestionar las solicitudes HTTP y devolver una respuesta al cliente. Cada controlador
-contiene una serie de métodos que se corresponden con los diferentes endpoints de la API ademas de los decoradores que definen los permisos de
+contiene una serie de métodos que se corresponden con los diferentes endpoints de la API además de los decoradores que definen los permisos de
 acceso a los recursos protegidos. En el Anexo \ref{apendix:controladores-api} se muestra la estructura de los controladores de la API.
 
 \paragraph{Servicios}
@@ -103,7 +103,7 @@ Los DTO en NestJS son clases que se utilizan para transferir datos entre los con
 estructura de los datos que se envían y reciben en las solicitudes HTTP, lo que facilita la validación de datos y la prevención de errores en la
 aplicación. En el Anexo \ref{apendix:dto-api} se muestra la estructura de los DTO de la API.
 
-\paragraph{Docuemntación de la API}
+\paragraph{Documentación de la API}
 Para la documentación de la API se utilizó la librería Swagger, la cual permite generar una documentación interactiva de la API a partir de los
 decoradores y comentarios en el código fuente. La documentación de la API se puede visualizar en la ruta /api-docs, como se muestra en la Figura
 \ref{fih:documentacion-api}.
@@ -121,7 +121,7 @@ decoradores y comentarios en el código fuente. La documentación de la API se p
 \bigbreak
 
 \paragraph{Dependencias del sistema web}
-Para crear el proyecto de NextJS se utilizó el comando \mintinline{text}{npx create-next-app@latest}, el cual crea una aplicación de
+Para crear el proyecto de NextJS se utilizó el comando "npx create-next-app@latest", el cual crea una aplicación de
 NextJS con una estructura de carpetas y archivos predefinida. Las dependencias utilizadas en el sistema web se gestionaron mediante
 npm y el archivo de configuración package.json. En el Anexo \ref{apendix:dependencias-web} se muestra dependencias utilizadas en el
 sistema web.
@@ -132,7 +132,7 @@ de la aplicación, como la URL de la API, el api key de Google Maps, la url y se
 para obtener las imágenes de Cloudinary. En el Anexo \ref{apendix:configuracion-env-web} se muestra el archivo .env.local con las
 variables de entorno del sistema web.
 
-\paragraph{Configuracion de la aplicación}
+\paragraph{Configuración de la aplicación}
 En Next.js, la configuración global de la aplicación se realiza mediante Providers y Contexts, los cuales permiten compartir datos y
 funcionalidades entre los componentes. En el Anexo \ref{apendix:configuracion-aplicacion-web} se muestra la configuración para los
 proveedores de sesión, componentes de UI, notificaciones y gestión de datos en el sistema web.
@@ -168,7 +168,7 @@ cual se encuentran las opciones de cambiar contraseña y cerrar sesión, como se
     \label{fig:menu-usuario-web}
 \end{figure}
 
-\paragraph{Gestion de usuarios}
+\paragraph{Gestión de usuarios}
 La gestión de usuarios en el sistema web se realiza mediante una tabla de entradas, la cual permite al usuario administrador
 visualizar los usuarios registrados en el sistema, como se muestra en la Figura \ref{fig:tabla-usuarios-web}. En esta tabla se
 muestran los campos de la información de los usuarios, como la fotografía, nombres, apellidos, correo electrónico, etnia, género,
@@ -255,8 +255,6 @@ tipos de incidentes por columnas especificas o por un filtro general, como se mu
 
 \paragraph{Gestión de zonas de vigilancia}
 
-Claro, aquí tienes el texto corregido:
-
 La gestión de zonas de vigilancia en el sistema web se realiza por medio de un mapa interactivo, en el cual el usuario administrador
 puede visualizar las zonas de vigilancia mediante polígonos, como se muestra en la Figura \ref{fig:mapa-zonas-vigilancia-web}.
 El usuario administrador puede realizar acciones como crear, editar y deshabilitar zonas de vigilancia, como se puede observar en la Figura
@@ -340,7 +338,7 @@ mediante un gradiente de colores, así como filtrar los incidentes por tipo y fe
 \bigbreak
 
 \paragraph{Dependencias de la aplicación móvil}
-Para crear el proyecto de Flutter se utilizó el comando \mintinline{text}{flutter create}, el cual crea una aplicación de Flutter con
+Para crear el proyecto de Flutter se utilizó el comando "flutter create", el cual crea una aplicación de Flutter con
 una estructura de carpetas y archivos predefinida. Las dependencias utilizadas en la aplicación móvil se gestionaron mediante flutter pub
 y el archivo de configuración pubspec.yaml. En el Anexo \ref{apendix:dependencias-movil} se muestra las dependencias utilizadas en la
 aplicación móvil.
@@ -504,7 +502,7 @@ del usuario, como se muestra en la Figura \ref{fig:seguir-ubicacion-movil}.
 \bigbreak
 
 Para el diseño del modelo analítico de BI se utilizó la metodología Hefesto, ya que esta facilita la construcción de un
-Data Warehouse y aporta información útil para mejorar el rendimiento \cite{darioDATAWAREHOUSINGMarco}.
+Data Warehouse y aporta información útil para mejorar el rendimiento \cite{darioDATAWAREHOUSINGMarco2018}.
 
 \input{chapters/III-resultados-y-discusion/4.3.1-carta-diseno-modelo-dimensional.tex}
 
@@ -552,7 +550,7 @@ existir ningún error, el sistema mostrará un mensaje de éxito, como se puede 
     \label{fig:exito-bi}
 \end{figure}
 
-\pagebreak{Cubo OLAP}
+\paragraph{Cubo OLAP}
 Para la construcción del cubo OLAP se empleó Visual Studio Community 2022, creando un proyecto de Analysis Services. En este
 proyecto, se definió la conexión a la base de datos de SQL Server, como se muestra en la Figura \ref{fig:conexion-olap},
 se creó un origen de datos, como se puede observar en la Figura \ref{fig:origen-datos-olap}, y se diseñó el cubo OLAP, como se
@@ -589,7 +587,7 @@ adicional al cubo OLAP, como se puede observar en la Figura \ref{fig:campos-orig
     \label{fig:campos-origen-datos-olap}
 \end{figure}
 
-En la dimension de tiempo se definieron jerarquías de tiempo que permiten visualizar los datos de forma secuencial en años, meses,
+En la dimensión de tiempo se definieron jerarquías de tiempo que permiten visualizar los datos de forma secuencial en años, meses,
 días y horas, como se puede observar en la Figura \ref{fig:dimension-tiempo-olap}.
 
 \begin{figure}[H]
