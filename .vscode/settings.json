@@ -20,6 +20,7 @@
 {
     "cSpell.words": [
         "Ambato",
+        "Balarezo",
         "CEPAL",
         "Cloudinary",
         "criminalistas",
@@ -36,6 +37,7 @@
         "Hefesto",
         "hotspots",
         "Luzmila",
+        "Mayorga",
         "monitoreo",
         "nodemailer",
         "PADF",
@@ -44,7 +46,8 @@
         "refactorización",
         "renderizado",
         "Renderizado",
-        "reportería"
+        "reportería",
+        "Urrutia"
     ],
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
     "latex-workshop.latex.outDir": "%DIR%/out"
